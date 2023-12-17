@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Admin panel</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </head>
+
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+        <main>
+            <!-- Contenedor de tipo fluido principal -->
+            <div class="container-fluid">
+
+                <!-- Boton de apertura del panel -->
+                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                    <!-- icono flecha boostrap-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg>
+                </button>
+
+                <!-- data-bs-scroll TRUE permite deslizar arriba/abajo el contenido de la pagina con el panel abierto-->
+                <!-- data-bs-backdrop FALSE evita el oscurecimiento del contenido del body cuando el panel esta abierto -->
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    
+                    <!-- Header del canvas-->
+                    <div class="offcanvas-header">
+
+                        <!-- Titulo del panel de administracion.-->
+                        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Admin action panel.</h5>
+                        <!-- Boton con X para cerrar el panel-->
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                    </div>
+
+                    <!-- Cuerpo principal del modal ofcanvas. Aqui va el contenido.-->
+                    <div class="offcanvas-body">
+                        <!-- Sección de filtro. -->
+                        <div id="filtro">
+                        
+                            <!-- elemento de accordeon filtro-->
+                            <div class="accordion" id="accordionPanelsStayOpenExample">
+
+                                <div class="accordion-item"> 
+
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                      <strong>Device filter options</strong>
+                                    </button>
+                                  </h2>
+
+                                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                    <!-- cuerpo del objeto del acordeon.-->
+                                    <div class="accordion-body">
+
+                                        <!-- ejemplo de formulario de opciones de filtrado.-->
+                                        <form>
+
+                                            <!-- Lista opciones principales -->
+                                            <ul> 
+
+                                                <!-- elementos de seleccion de planta -->
+                                                <li>
+                                                    <label for="all_floors">Floors&nbsp;(Select all)&nbsp;</label><input type="checkbox" id="all_floors" name="all_floors" value="all_floors">
+                                                    <ul style="list-style-type: none;">
+                                                        <!-- elementos de seleccion de planta -->
+                                                        <li><label for="floor1">Floor 1&nbsp;</label><input type="checkbox" id="floor1" name="floor1" value="floor1"></li>
+                                                        <li><label for="floor2">Floor 2&nbsp;</label><input type="checkbox" id="floor2" name="floor2" value="floor2"></li>
+                                                        <li><label for="floor3">Floor 3&nbsp;</label><input type="checkbox" id="floor3" name="floor3" value="floor3"></li>
+                                                        <li><label for="floor4">Floor 4&nbsp;</label><input type="checkbox" id="floor4" name="floor4" value="floor4"></li>
+                                                        <li><label for="floor5">Floor 5&nbsp;</label><input type="checkbox" id="floor5" name="floor5" value="floor5"></li>
+                                                        <li><label for="floor6">Floor 6&nbsp;</label><input type="checkbox" id="floor6" name="floor6" value="floor6"></li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>Classrooms
+                                                    <ul style="list-style-type: none;">
+                                                        <li>Classroom 1</li>
+                                                        <li>Classroom 2</li>
+                                                        <li>Classroom 3</li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>User type
+                                                    <ul style="list-style-type: none;">
+                                                        <li>Professor</li>
+                                                        <li>Student</li>
+                                                        <li>Service & staff</li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>Device type
+                                                    <ul style="list-style-type: none;">
+                                                        <li>Computer</li>
+                                                        <li>Laptop</li>
+                                                        <li>WoW / RCC</li>
+                                                    </ul>
+                                                </li>
+
+                                            </ul> <!-- cierra el cuerpo de lista principal -->
+
+                                            <input type="submit" value="Apply filter">
+                                        </form>
+                                      
+                                    </div> <!-- cierra el cuerpo del objeto del acordeon.-->
+                                  </div>
+                                </div>
+                                
+                              </div>
+                        
+                        
+                        
+                        </div><!-- cierra la seccion de filtro.-->
+
+                        <!-- seccion de parametros y opciones de accion -->
+                        <div id="acciones" style="background-color: rgb(255, 255, 255); width: 100%;" class="pb-3"> 
+                            
+
+                            <div id="acciones-apagar"> <!-- parametros accion apagar -->
+
+                                <h2 class="accordion-header mt-3">
+                                    <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                      <strong>Shutdown options</strong>
+                                    </button>
+                                </h2>
+
+
+                                <div>
+                                    <div class="container pt-3" id="shutdown" >
+                                        <button type="button" class="btn btn-warning">Log off</button>
+                                        <button type="button" class="btn btn-danger">Shut down</button>
+                                        <button type="button" class="btn btn-info">Reboot</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div id="acciones-apagar"> <!-- parametros accion navegador -->
+
+                                <h2 class="accordion-header mt-3">
+                                    <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                      <strong>Remote link browsing</strong>
+                                    </button>
+                                </h2>
+
+
+                                <div>
+                                    <div class="container pt-3" id="shutdown" >
+                                        <form> 
+                                            <input type="text" style="width:100%; margin-bottom: 10px;">
+                                            <input type="submit" value="Send link">
+                                        </form>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            
+                            
+                        
+                        </div> <!--Cierra la seccion de parametros y opciones de accion -->
+
+                    </div> <!-- cierra el body del offcanvas-->
+
+                </div> <!-- cierra el elemento principal del panel off-canvas -->
+
+            </div> <!-- closes main fluid container.-->
+
+
+        </main>
+
+
+        <footer>
+        
+        </footer>
+
+
+    </body>
+</html>
