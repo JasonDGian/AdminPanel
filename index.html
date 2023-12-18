@@ -9,7 +9,7 @@
 
 
     <body>
-
+        <!-- barra navegación provisional-->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Navbar</a>
@@ -19,7 +19,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#">Shutdown</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
@@ -176,7 +176,7 @@
 
                             </div>
 
-                            <div id="acciones-apagar"> <!-- parametros accion navegador -->
+                            <div id="acciones-navegador"> <!-- parametros accion navegador -->
 
                                 <h2 class="accordion-header mt-3">
                                     <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
@@ -185,17 +185,139 @@
                                 </h2>
 
 
-                                <div>
+                                <div><!-- opciones de la acción.-->
                                     <div class="container pt-3" id="shutdown" >
                                         <form> 
                                             <input type="text" style="width:100%; margin-bottom: 10px;">
                                             <input type="submit" value="Send link">
                                         </form>
 
-                                    </div>
+                                    </div><!-- cierre opciones accion-->
                                 </div>
                                 
                             </div>
+
+                            <div id="acciones-script"> <!-- parametros accion orden remota -->
+
+                              <h2 class="accordion-header mt-3">
+                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>Remote command</strong>
+                                  </button>
+                              </h2>
+
+                              <div> <!-- opciones de la acción.-->
+                                <form>
+                                <label for="">Command:</label>
+                                <textarea id="send-command" name="send-command" style="width: 100%; min-height: 100px;"></textarea>
+                                <input type="submit" value="Send command">
+                                </form>
+                              </div> <!-- cierre opciones accion-->
+
+                            </div>
+
+                            <div id="acciones-formulario-id"> <!-- parametros accion nombreaccion -->
+
+                              <h2 class="accordion-header mt-3">
+                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>Uninstall program</strong>
+                                  </button>
+                              </h2>
+
+                              <div class="pt-2"> <!-- opciones de la acción.-->
+                                <form>
+
+                                  <select class="mb-2" style="width:100%; height: 35px;">
+                                    <option>Select application</option>
+                                    <!-- ¿De donde salen las opciones de esta lista? ¿Como se generan? ¿Es mejor hacerlo de otra manera? -->
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                    <option>Option 4</option>
+                                    <option>Option 5</option>
+                                    <option>Option 6</option>
+                                  </select>
+
+                                  <input type="submit" value="Uninstall">
+                                </form>
+                                
+
+                              </div> <!-- cierre opciones accion-->
+                              
+                            </div>
+
+                            <div id="acciones-nombreaccion"> <!-- parametros accion nombreaccion -->
+
+                              <h2 class="accordion-header mt-3">
+                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>Nombre panel</strong>
+                                  </button>
+                              </h2>
+
+                              <div> <!-- opciones de la acción.-->
+
+                              </div> <!-- cierre opciones accion-->
+                              
+                            </div>
+
+                            <div id="acciones-nombreaccion"> <!-- parametros accion nombreaccion -->
+
+                              <h2 class="accordion-header mt-3">
+                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>Nombre panel</strong>
+                                  </button>
+                              </h2>
+
+                              <div> <!-- opciones de la acción.-->
+
+                              </div> <!-- cierre opciones accion-->
+                              
+                            </div>
+
+                            <div id="acciones-nombreaccion"> <!-- parametros accion nombreaccion -->
+
+                              <h2 class="accordion-header mt-3">
+                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>Nombre panel</strong>
+                                  </button>
+                              </h2>
+
+                              <div> <!-- opciones de la acción.-->
+
+                              </div> <!-- cierre opciones accion-->
+                              
+                            </div>
+
+                            <div id="acciones-nombreaccion"> <!-- parametros accion nombreaccion -->
+
+                              <h2 class="accordion-header mt-3">
+                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>Nombre panel</strong>
+                                  </button>
+                              </h2>
+
+                              <div> <!-- opciones de la acción.-->
+
+                              </div> <!-- cierre opciones accion-->
+                              
+                            </div>
+
+                            <div id="acciones-nombreaccion"> <!-- parametros accion nombreaccion -->
+
+                              <h2 class="accordion-header mt-3">
+                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>Nombre panel</strong>
+                                  </button>
+                              </h2>
+
+                              <div> <!-- opciones de la acción.-->
+
+                              </div> <!-- cierre opciones accion-->
+                              
+                            </div>
+                              
+
+
+
 
                             
                             
