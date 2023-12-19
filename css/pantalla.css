@@ -1,0 +1,60 @@
+#planta{
+    width: 100%;
+}
+
+#titulo-planta{
+    font-size: 35px;
+    margin-left: 5px;
+}
+
+#aula{
+    width: 100%;
+}
+
+#titulo-aula{
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+#pc{
+    border: 2px solid ;
+    border-color: rgb(199, 199, 199);
+    border-radius: 5%;
+    margin-left: 50px;
+    width: 250px;
+    height: 250px;
+
+}
+
+#pc-arriba{
+    width: 100%;
+    height: 50px;
+}
+
+#pc-arriba-izquierda{
+    float: left;
+    width: 50%;
+}
+
+#nombre-pc{
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 20px;
+}
+#pc-arriba-derecha{
+    float: left;
+    width: 50%; 
+}
+
+#pc-medio{
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+
+#pc-abajo{
+    width: 100%;
+    height: 50px;
+    border-top: 2px solid;
+    border-color: rgb(199, 199, 199);
+}
