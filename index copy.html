@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Admin panel</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+
+        <!-- ESPECIFICACION DE VISIBILIDAD DE ELEMENTOS ADMIN PANEL-->
+   
+    
+      </head>
+
+
+      <body>    
+
+        <!-- BARRA DE NAVEGACIÓN
+        <nav class="navbar bg-primary" data-bs-theme="dark">
+          <button type="button" class="btn btn-info" onclick="myFunction('acciones-apagar')">acciones-apagar</button>
+          <button type="button" class="btn btn-info" class="btn" onclick="myFunction('acciones-navegador')">acciones-navegador</button>
+          <button type="button" class="btn btn-info" class="btn" onclick="myFunction('acciones-script')">acciones-script</button>
+          <button type="button" class="btn btn-info" class="btn" onclick="myFunction('acciones-desistalar')">acciones-desistalar</button>
+          <button type="button" class="btn btn-info" class="btn" onclick="myFunction('acciones-instalar-aplicacion')">acciones-instalar-aplicacion</button>
+          <button type="button" class="btn btn-info" class="btn" onclick="myFunction('acciones-id-junta')">acciones-id-junta</button>
+          <button type="button" class="btn btn-info" class="btn" onclick="myFunction('acciones-nombreaccion')">acciones-instalar-aplicacion</button>
+        </nav> -->
+        
+        <nav class="navbar navbar-expand-lg bg-primary">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- BARRA DE NAVEGACION -->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href="#">REAKTOR</a>
+
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                  <button type="button" class="btn btn-info" onclick="myFunction('acciones-apagar')">acciones-apagar</button>  
+                </li>
+
+                <li class="nav-item">
+                  <button type="button" class="btn btn-info" class="btn" onclick="myFunction('acciones-navegador')">acciones-navegador</button>
+                </li>
+
+                <li class="nav-item">
+                  <button type="button" class="btn btn-info" class="btn" onclick="myFunction('acciones-script')">acciones-script</button>
+                </li>
+
+                <li class="nav-item">
+                  <button type="button" class="btn btn-info" class="btn" onclick="myFunction('acciones-desistalar')">acciones-desistalar</button>
+                </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-info" class="btn" onclick="myFunction('acciones-instalar-aplicacion')">acciones-instalar-aplicacion</button>
+                </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-info" class="btn" onclick="myFunction('acciones-id-junta')">acciones-id-junta</button>
+                </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-info" class="btn" onclick="myFunction('acciones-nombreaccion')">nombre-panel</button>
+                </li>
+              </ul>
+
+              <!-- SECCION DE BUSQUEDA -->
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn bg-light" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+                            <!-- parametros accion apagar -->
+                            <div id="acciones-apagar" style="display:none;"> 
+
+                              <h2 class="accordion-header mt-3">
+                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>Shutdown options</strong>
+                                  </button>
+                              </h2>
+
+
+                            <!-- Botones radio de apagar-bloquear-reiniciar -->
+                            <div class="container pt-2" id="shutdown">  
+                              <center>                              
+                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                  <form>
+                                    <input type="radio" class="btn-check" name="btnradio" id="log-off-button" autocomplete="off">
+                                    <label class="btn btn-outline-warning" for="log-off-button">Log off</label>
+                                  
+                                    <input type="radio" class="btn-check" name="btnradio" id="shut-down-button" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="shut-down-button">Shut down</label>
+                                  
+                                    <input type="radio" class="btn-check" name="btnradio" id="reboot-button" autocomplete="off">
+                                    <label class="btn btn-outline-info" for="reboot-button">Reboot</label>
+                                    <input type="submit" value="Send action" class="mt-2">
+                                  </form>
+                                </div>
+                              </center>
+                            </div>
+                            <!-- Ceirra botones radio de apagar-bloquear-reiniciar -->
+                                
+                            </div>
+
+                            <!-- parametros accion navegador -->
+                            <div id="acciones-navegador" style="display:none;"> 
+
+                                <h2 class="accordion-header mt-3">
+                                    <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                      <strong>Remote link browsing</strong>
+                                    </button>
+                                </h2>
+
+                                <!-- opciones de enlace remoto.-->
+                                <div class="container pt-3" id="shutdown" >
+                                    <form method="post" action=""> 
+                                        <input type="text" style="width:100%; margin-bottom: 10px;">
+                                        <input type="submit" value="Send link">&ensp;<input type="reset" class="mt-2">
+                                    </form>
+
+                                </div>
+                                <!-- cierre opciones de enlace remoto-->
+                                
+                                
+                            </div>
+
+                            <div id="acciones-script" style="display:none;"> <!-- parametros accion orden remota -->
+
+                              <h2 class="accordion-header mt-3">
+                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>Remote command</strong>
+                                  </button>
+                              </h2>
+
+                              <div> <!-- opciones de la acción.-->
+                                <form method="post" action="dirección-donde-enviar-los-archivos">
+                                <label for="">Command:</label>
+                                <textarea id="send-command" name="send-command" style="width: 100%; min-height: 100px;"></textarea>
+                                <input type="submit" value="Send command">&ensp;<input type="reset" class="mt-2">
+                                </form>
+                              </div> <!-- cierre opciones accion-->
+
+                            </div>
+
+                            <!-- parametros accion desistalar -->
+                            <div id="acciones-desistalar" style="display:none;"> 
+
+                              <h2 class="accordion-header mt-3">
+                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>Uninstall application</strong> 
+                                  </button>
+                              </h2>
+
+                              <div class="pt-2">
+                                <form method="post" action="dirección-donde-enviar-los-archivos">
+                                  <input type="text" placeholder="Application name" style="width: 100%;">
+                                  <input type="submit" value="Uninstall" class="mt-2">&ensp;<input type="reset" class="mt-2">
+                                </form>
+                              </div>        
+                            </div>
+                            <!-- cierre parametros accion desistalar -->
+
+                            <div id="acciones-instalar-aplicacion" style="display:none;"> <!-- parametros accion nombreaccion -->
+
+                              <h2 class="accordion-header mt-3">
+                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>Install application</strong>
+                                  </button>
+                              </h2>
+
+                              <div class="pt-3"> <!-- opciones de la acción.-->
+                                <form method="post" action="donde-enviar-los-archivos" enctype="multipart/form-data">
+                                  <input type="file">
+                                  <input type="submit" class="mt-2" value="Install">&ensp;<input type="reset" class="mt-2">
+                                </form>
+                              </div> <!-- cierre opciones accion-->
+                              
+                            </div>
+
+                            <div id="acciones-id-junta" style="display:none;"> <!-- parametros accion nombreaccion -->
+
+                              <h2 class="accordion-header mt-3">
+                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>ID Update</strong>
+                                  </button>
+                              </h2>
+
+                              <div> <!-- opciones de id junta.-->
+                                <div class="pt-2">
+                                  <form method="post" action="dirección-donde-enviar-los-archivos">
+                                    <input type="text" placeholder="ID Junta andalucia" style="width: 100%;">
+                                    <input type="submit" value="Update ID" class="mt-2">&ensp;<input type="reset" class="mt-2">
+                                  </form>
+                                </div>   
+                              </div> <!-- cierre opciones id junta-->
+                              
+                            </div>
+
+                            <!-- EJEMPLO PANEL OPCIONES.-->
+                            <div id="acciones-nombreaccion" style="display:none;"> <!-- parametros accion nombreaccion -->
+
+                              <h2 class="accordion-header mt-3">
+                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>Nombre panel</strong>
+                                  </button>
+                              </h2>
+
+                              <div> <!-- opciones de la acción.-->
+
+                              </div> <!-- cierre opciones accion-->
+                              
+                            </div><!-- parametros accion nombreaccion -->
+        
+
+        <!-- FUNCION DE VISIBILIDAD ELEMENTOS PANEL LATERAL -->
+        <!-- Los botones especifican el parametro que recibe la funcion que decided que elemento se esconde o muestra -->
+        <script>
+        
+        function myFunction(elemento) {
+          var x = document.getElementById(elemento);
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+
+
+        </script>
+        
+        </body>
+</html>
