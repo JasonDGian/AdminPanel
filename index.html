@@ -103,53 +103,124 @@
                                             <ul> 
 
                                                 <!-- elementos de seleccion de planta -->
-                                                <li>
-                                                    <label for="all_floors"><b>Floors&nbsp;(Select all)&nbsp;</b></label><input type="checkbox" id="all_floors" name="all_floors" value="all_floors">
+
+                                                <li><b>Classrooms</b></li>
                                                     <ul style="list-style-type: none;">
-                                                        <!-- elementos de seleccion de planta -->
-                                                        <li><label for="floor1">Floor 1&nbsp;</label><input type="checkbox" id="floor1" name="floor1" value="floor1"></li>
-                                                        <li><label for="floor2">Floor 2&nbsp;</label><input type="checkbox" id="floor2" name="floor2" value="floor2"></li>
-                                                        <li><label for="floor3">Floor 3&nbsp;</label><input type="checkbox" id="floor3" name="floor3" value="floor3"></li>
-                                                        <li><label for="floor4">Floor 4&nbsp;</label><input type="checkbox" id="floor4" name="floor4" value="floor4"></li>
-                                                        <li><label for="floor5">Floor 5&nbsp;</label><input type="checkbox" id="floor5" name="floor5" value="floor5"></li>
-                                                        <li><label for="floor6">Floor 6&nbsp;</label><input type="checkbox" id="floor6" name="floor6" value="floor6"></li>
+                                                        <li>Classroom 0.1&nbsp;<input type="checkbox" id="Classroom0.1" name="Classroom0.1" value="Classroom0.1"></li>
+                                                        <li>Classroom 1.1&nbsp;<input type="checkbox" id="Classroom1.1" name="Classroom1.1" value="Classroom1.1"></li>
+                                                        <li>Classroom 2.1&nbsp;<input type="checkbox" id="Classroom2.1" name="Classroom2.1" value="Classroom2.1"></li>
                                                     </ul>
                                                 </li>
 
-                                                <li><b>Classrooms&nbsp;(Select all)&nbsp;</b></label><input type="checkbox" id="all_Classrooms" name="all_Classrooms" value="all_Classrooms"></li>
-                                                    <ul style="list-style-type: none;">
-                                                        <li>Classroom 1&nbsp;<input type="checkbox" id="Classroom1" name="Classroom1" value="Classroom1"></li>
-                                                        <li>Classroom 2&nbsp;<input type="checkbox" id="Classroom1" name="Classroom1" value="Classroom1"></li>
-                                                        <li>Classroom 3&nbsp;<input type="checkbox" id="Classroom1" name="Classroom1" value="Classroom1"></li>
-                                                    </ul>
+                                                <li><b>Mobile Cart</b></li>
+                                                  <ul style="list-style-type: none;">
+                                                      <li>First floor HP&nbsp;<input type="checkbox" id="Classroom0.1" name="Classroom0.1" value="Classroom0.1"></li>
+                                                      <li>First floor Lenovo&nbsp;<input type="checkbox" id="Classroom1.1" name="Classroom1.1" value="Classroom1.1"></li>
+                                                      <li>Second floor HP&nbsp;<input type="checkbox" id="Classroom2.1" name="Classroom2.1" value="Classroom2.1"></li>
+                                                  </ul>
                                                 </li>
 
-                                                <li><b>User type&nbsp;(Select all)&nbsp;</b></label><input type="checkbox" id="all_User_Type" name="all_User_Type" value="all_User_Type"></li>
+                                                <li><b>User type</b></li>
                                                     <ul style="list-style-type: none;">
                                                         <li>Professor&nbsp;<input type="checkbox" id="Professor" name="Professor" value="Professor"></li>
                                                         <li>Student&nbsp;<input type="checkbox" id="Student" name="Student" value="Student"></li>
-                                                        <li>Service & staff&nbsp;<input type="checkbox" id="Service&Staff" name="Service&Staff" value="Service&Staff"></li>
                                                     </ul>
                                                 </li>
-
-                                                <li><b>Device type&nbsp;(Select all)&nbsp;</b></label><input type="checkbox" id="all_Device_type" name="all_Device_type" value="all_Device_type"></li>
-                                                    <ul style="list-style-type: none;">
-                                                        <li>Computer<input type="checkbox" id="Computer" name="Computer" value="Computer"></li>
-                                                        <li>Laptop&nbsp;<input type="checkbox" id="Laptop" name="Laptop" value="Laptop"></li>
-                                                        <li>WoW / RCC&nbsp;<input type="checkbox" id="Wow/RCC" name="Wow/RCC" value="Wow/RCC"></li>
-                                                    </ul>
-                                                </li>
-
                                             </ul> <!-- cierra el cuerpo de lista principal -->
 
-                                            <div> <!-- buscador de ordenadores segun numero de serie...-->
+
+                                            <div style="margin-top: 5%;"> <!-- buscador de ordenadores segun numero de serie...-->
                                               <label for=""><b>Search by id:</b></label>
                                               <input type="text" style="width:100%; margin-bottom: 10px;">
                                             </div> <!-- cierre buscador de ordenadores segun numero de serie...-->
 
-                                            <input type="submit" value="Apply filter">&ensp;<input type="reset" class="mt-2">
-                                        </form>
+
+                                            <input type="submit" value="Apply filter"> <!--boton para aplicar los filtros-->
+
+                                            <input type="reset" value="Clean filter"> <!--boton para limpiar el filtro-->
+                                            
+                                            <!--Estilos para la lista con los checkboxes-->
+
+                                            <style> 
+                                              .multiselect {
+                                                  width: 200px;
+                                                  position:relative;
+                                              }
+                                           
+                                              .selectBox {
+                                                  position: relative;
+                                              }
+                                           
+                                              .selectBox select {
+                                                  width: 100%;
+                                              }
+                                           
+                                              .overSelect {
+                                                  position: absolute;
+                                                  left: 0;
+                                                  right: 0;
+                                                  top: 0;
+                                                  bottom: 0;
+                                              }
+                                           
+                                              #checkboxes {
+                                                  display: block;
+                                                  border: 1px #dadada solid;
+                                                  position:absolute;
+                                                  width:100%;
+                                                  background-color:white;
+                                                  box-sizing: border-box;
+                                                  overflow-y:auto;
+                                                  max-height:110px;
+                                                  z-index: 1;
+                                              }
+                                              #checkboxes.hide {display:none;}
+                                           
+                                              #checkboxes label {
+                                                  display: block;
+                                              }
+                                           
+                                              #checkboxes label:hover {
+                                                  background-color: #1e90ff;
+                                              }
+                                              </style>
+
+                                              <!--Fin de los estilos para la lista con los checkboxes-->
+
+                                            <div class="multiselect" style="margin-top: 5%;">
+                                              <div class="selectBox" onclick="showCheckboxes()">
+                                                  <select>
+                                                      <option>Select Pc</option>
+                                                  </select>
+                                                  <div class="overSelect"></div>
+                                              </div>
+                                              <div id="checkboxes" class="hide" >
+                                                  <label for="c1"><input type="checkbox" id="c1" />&nbsp;Select all</label>
+                                                  <label for="c2"><input type="checkbox" id="c2" />&nbsp;Pc 0.5.2</label>
+                                                  <label for="c3"><input type="checkbox" id="c3" />&nbsp;Pc 0.5.3</label>
+                                                  <label for="c4"><input type="checkbox" id="c4" />&nbsp;Pc 0.5.4</label>
+                                                  <label for="c5"><input type="checkbox" id="c5" />&nbsp;Pc 1.2.3</label>
+                                              </div>
+                                          </div>
+                                      </form>
                                       
+                                      <!--Script para hacer que el select contenga checkboxes-->
+                                      <script> 
+                                      function showCheckboxes() {
+                                          var checkboxes = document.getElementById("checkboxes");
+                                          if(checkboxes.classList.contains("hide")) {
+                                              checkboxes.classList.remove("hide");
+                                          } else {
+                                              checkboxes.classList.add("hide");
+                                          }
+                                      }
+                                      </script>
+
+                                       <!--Fin del script para hacer que el select contenga checkboxes-->
+
+
+                                        </form>
+
                                     </div> <!-- cierra el cuerpo del objeto del acordeon.-->
                                   </div>
                                 </div>
