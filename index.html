@@ -178,15 +178,17 @@
                                 <center>                              
                                   <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                                     <form>
-                                      <input type="radio" class="btn-check" name="btnradio" id="log-off-button" autocomplete="off">
+
+                                      <input type="radio" class="btn-check" name="btnradioapagado" id="log-off-button" autocomplete="off">
                                       <label class="btn btn-outline-warning" for="log-off-button">Log off</label>
                                     
-                                      <input type="radio" class="btn-check" name="btnradio" id="shut-down-button" autocomplete="off">
+                                      <input type="radio" class="btn-check" name="btnradioapagado" id="shut-down-button" autocomplete="off">
                                       <label class="btn btn-outline-danger" for="shut-down-button">Shut down</label>
                                     
-                                      <input type="radio" class="btn-check" name="btnradio" id="reboot-button" autocomplete="off">
+                                      <input type="radio" class="btn-check" name="btnradioapagado" id="reboot-button" autocomplete="off">
                                       <label class="btn btn-outline-info" for="reboot-button">Reboot</label>
                                       <input type="submit" value="Send action" class="mt-2">
+
                                     </form>
                                   </div>
                                 </center>
@@ -289,8 +291,6 @@
                               
                             </div>
 
-
-
                             <!-- EJEMPLO PANEL OPCIONES.-->
                             <div id="acciones-nombreaccion"> <!-- parametros accion nombreaccion -->
 
@@ -300,20 +300,58 @@
                                   </button>
                               </h2>
 
-                              <div> <!-- opciones de la acción.-->
+                                <!-- Botón que abre el modal de configuración de tarjeta de red -->
+                                <center>
+                                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                  Network interface config
+                                </button>
+                                </center>
 
-                              </div> <!-- cierre opciones accion-->
+                                <!-- Modal -->
+                                <!-- data-bs-backdrop="false" añadido para esconder el backdrop oscuro que impide interaccion -->
+                                <div class="modal fade" data-bs-backdrop="false" id="exampleModal" tabindex="-1" aria-labelledby="networkConfigModal" aria-hidden="true">
+                                  <div class="modal-dialog">
+
+                                    <!-- Contenido del modal -->
+                                    <div class="modal-content">
+
+                                      <!-- Cabecero del modal -->
+                                      <!-- utilidad a titulo informativo -->
+                                      <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="networkConfigModal">Modal title</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+
+                                      <!-- cuerpo del modal -->
+                                      <!-- aqui van los botones de configuración, los valores a configurar en la tarjeta. -->
+                                      <div class="modal-body">
+                                        Aqui introducir los parametros de configuración de la tarjeta.
+                                      </div>
+
+                                      <!-- footer del modal-->
+                                      <!-- aqui introducir botones de aplicar y cerrar-->
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              <div> <!-- opciones de la acción -->
+
+                              </div> <!-- cierre opciones accion -->
                               
                             </div><!-- parametros accion nombreaccion -->
-                            <!-- CIERRE EJEMPLO PANEL OPCIONES.-->
+                            <!-- CIERRE EJEMPLO PANEL OPCIONES -->
 
                         </div> <!--Cierra la seccion de parametros y opciones de accion -->
 
-                    </div> <!-- cierra el body del offcanvas-->
+                    </div> <!-- cierra el body del offcanvas -->
 
                 </div> <!-- cierra el elemento principal del panel off-canvas -->
 
-            </div> <!-- closes main fluid container.-->
+            </div> <!-- closes main fluid container -->
 
         </main>
 
