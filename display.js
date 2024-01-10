@@ -15,8 +15,8 @@ function myFunction() {
     document.getElementById("WIFI") .style.display = "none";
     document.getElementById("Data") .style.display = "none";
     document.getElementById("Run") .style.display = "none";
-    document.getElementById("Shutdown") .disabled = "true";
-    document.getElementById("Block") .disabled = "false";
+    
+    
 }
 
   function myFunction1() {
@@ -35,8 +35,8 @@ function myFunction() {
     document.getElementById("WIFI") .style.display = "none";
     document.getElementById("Data") .style.display = "none";
     document.getElementById("Run") .style.display = "none";
-    document.getElementById("Block") .disabled = "true";
-    document.getElementById("Shutdown") .disabled = "true";
+    
+    
   }
 
   function myFunction2() {
