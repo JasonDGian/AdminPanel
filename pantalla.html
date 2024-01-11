@@ -6,10 +6,11 @@
     <link rel="stylesheet" type="text/css" href="css/pantalla.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ee2f80d5ba.js" crossorigin="anonymous"></script>
     <title>Pantalla</title>
 </head>
 <body>
-    <div id="imagenTonto"  style="position: absolute; left: 50%; transform: translate(-50%); z-index: 1000;"></div>
+    <div id="imagenInsertada" style="position:absolute; pointer-events: none; z-index: 1000;"></div>
     <main>
         <section>
             <!--Comienzo de planta 1-->
@@ -114,7 +115,7 @@
                                 <p class="margen"><b>Identificator:</b> <!--Aqui deberia estar insertada la variable del identificador-->2242<!--Aqui deberia estar insertada la variable del identificador--></p> 
                             </div>
                             <div id="pc-medio-imagen">
-                                <img src="img/sin_imagen.png">
+                                <img src="img/Prueba1.PNG" id="imagenAmpliada1" onclick="ampliarImagen2()">
                             </div>
                         </div>
                         <!--Botones usables de la aplicacion-->
@@ -179,9 +180,7 @@
                             <p class="margen"><b>Identificator:</b> <!--Aqui deberia estar insertada la variable del identificador-->1342<!--Aqui deberia estar insertada la variable del identificador--></p> 
                         </div>
                         <div id="pc-medio-imagen">
-                            <a href="img/sin_imagen.png" target="_blank">
-                                <img src="img/sin_imagen.png" id="imagenAmpliada" onclick="ampliarImagen()">
-                            </a> 
+                                <img src="img/Prueba2.PNG" id="imagenAmpliada2" onclick="ampliarImagen3()">
                         </div>
                     </div>
                     <!--Botones usables de la aplicacion-->
