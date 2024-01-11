@@ -9,60 +9,62 @@
     </head>
 
     <header>
+
       <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-          <button onclick="myFunction('acciones-apagar'),myFunction('Shutdown')" class="nav-link active" id="nav-1-tab" data-bs-toggle="tab" data-bs-target="#nav-1" type="button" role="tab" aria-controls="nav-1" aria-selected="true" style="color: black;">Shutdown</button>
-          <button onclick="myFunction('acciones-apagar'),myFunction('Shutdown')" class="nav-link" id="nav-2-tab" data-bs-toggle="tab" data-bs-target="#nav-2" type="button" role="tab" aria-controls="nav-2" aria-selected="false" style="color: black;">Block</button>
-          <button onclick="myFunction2()" class="nav-link" id="nav-3-tab" data-bs-toggle="tab" data-bs-target="#nav-3" type="button" role="tab" aria-controls="nav-3" aria-selected="false" style="color: black;">Screenshot</button>
-          <button onclick="myFunction3()" class="nav-link" id="nav-4-tab" data-bs-toggle="tab" data-bs-target="#nav-4" type="button" role="tab" aria-controls="nav-4" aria-selected="false" style="color: black;">Open web page</button>
-          <button onclick="myFunction4()" class="nav-link" id="nav-5-tab" data-bs-toggle="tab" data-bs-target="#nav-5" type="button" role="tab" aria-controls="nav-5" aria-selected="false" style="color: black;">Install</button>
-          <button onclick="myFunction5()" class="nav-link" id="nav-6-tab" data-bs-toggle="tab" data-bs-target="#nav-6" type="button" role="tab" aria-controls="nav-6" aria-selected="false" style="color: black;">Uninstall</button>
-          <button onclick="myFunction6()" class="nav-link" id="nav-7-tab" data-bs-toggle="tab" data-bs-target="#nav-7" type="button" role="tab" aria-controls="nav-7" aria-selected="false" style="color: black;">WIFI config</button>
-          <button onclick="myFunction7()" class="nav-link" id="nav-8-tab" data-bs-toggle="tab" data-bs-target="#nav-8" type="button" role="tab" aria-controls="nav-8" aria-selected="false" style="color: black;">Data update</button>
-          <button onclick="myFunction8()" class="nav-link" id="nav-9-tab" data-bs-toggle="tab" data-bs-target="#nav-9" type="button" role="tab" aria-controls="nav-9" aria-selected="false" style="color: black;">Run code</button>
+          <img src="img/icono.PNG" alt="">
+          <button onclick="myFunction('acciones-apagar')" class="nav-link active" id="nav-1-tab" data-bs-toggle="tab" data-bs-target="#nav-1" type="button" role="tab" aria-controls="nav-1" aria-selected="true" style="color: black;">Shutdown</button>
+                  <button onclick="myFunction('acciones-bloqueopuertos')" class="nav-link" id="nav-2-tab" data-bs-toggle="tab" data-bs-target="#nav-2" type="button" role="tab" aria-controls="nav-2" aria-selected="false" style="color: black;">Block</button>
+                  <button onclick="myFunction('acciones-screenshot')" class="nav-link" id="nav-3-tab" data-bs-toggle="tab" data-bs-target="#nav-3" type="button" role="tab" aria-controls="nav-3" aria-selected="false" style="color: black;">Screenshot</button>
+                  <button onclick="myFunction('acciones-navegador')" class="nav-link" id="nav-4-tab" data-bs-toggle="tab" data-bs-target="#nav-4" type="button" role="tab" aria-controls="nav-4" aria-selected="false" style="color: black;">Open web page</button>
+                  <button onclick="myFunction('acciones-instalar-aplicacion')" class="nav-link" id="nav-5-tab" data-bs-toggle="tab" data-bs-target="#nav-5" type="button" role="tab" aria-controls="nav-5" aria-selected="false" style="color: black;">Install</button>
+                  <button onclick="myFunction('acciones-desistalar')" class="nav-link" id="nav-6-tab" data-bs-toggle="tab" data-bs-target="#nav-6" type="button" role="tab" aria-controls="nav-6" aria-selected="false" style="color: black;">Uninstall</button>
+                  <button onclick="myFunction('acciones-networking')" class="nav-link" id="nav-7-tab" data-bs-toggle="tab" data-bs-target="#nav-7" type="button" role="tab" aria-controls="nav-7" aria-selected="false" style="color: black;">WIFI config</button>
+                  <button onclick="myFunction('acciones-id-junta')" class="nav-link" id="nav-8-tab" data-bs-toggle="tab" data-bs-target="#nav-8" type="button" role="tab" aria-controls="nav-8" aria-selected="false" style="color: black;">Data update</button>
+                  <button onclick="myFunction('acciones-script')" class="nav-link" id="nav-9-tab" data-bs-toggle="tab" data-bs-target="#nav-9" type="button" role="tab" aria-controls="nav-9" aria-selected="false" style="color: black;">Run code</button>
         </div>
       </nav>
-      <div id="Shutdown" class="card-des">
+      <div id="acciones-apagar-des" class="card-des">
         <div style="font-size: 13px;"class="card-body">
           &nbsp; &nbsp; Apagado y reinicio de ordenadores en aulas, carritos y profesores.
         </div>
       </div>
-      <div id="Block" class="card-des" style="display: none">
+      <div id="acciones-bloqueopuertos-des" class="card-des" style="display: none">
         <div style="font-size: 13px;" class="card-body">
           &nbsp; &nbsp; Bloqueo de dispositivos E/S en aulas y carritos.
         </div>
       </div>
-      <div id="Screenshot" class="card-des" style="display: none">
+      <div id="acciones-screenshot-des" class="card-des" style="display: none">
         <div style="font-size: 13px;" class="card-body">
           &nbsp; &nbsp; Captura de pantallas en aulas y carritos.
         </div>
       </div>
-      <div id="Open" class="card-des" style="display: none">
+      <div id="acciones-navegador-des" class="card-des" style="display: none">
         <div style="font-size: 13px;" class="card-body">
           &nbsp; &nbsp; Apertura remota de enlace web a aulas y carritos.
         </div>
       </div>
-      <div id="Install" class="card-des" style="display: none">
+      <div id="acciones-instalar-aplicacion-des" class="card-des" style="display: none">
         <div style="font-size: 13px;" class="card-body">
           &nbsp; &nbsp; Instalación remota de aplicaciones en aulas, carritos y profesores.
         </div>
       </div>
-      <div id="Uninstall" class="card-des" style="display: none">
+      <div id="acciones-desistalar-des" class="card-des" style="display: none">
         <div style="font-size: 13px;" class="card-body">
           &nbsp; &nbsp; Desinstalación remota de aplicaciones en aulas, carritos y profesores.
         </div>
       </div>
-      <div id="WIFI" class="card-des" style="display: none">
+      <div id="acciones-networking-des" class="card-des" style="display: none">
         <div style="font-size: 13px;" class="card-body">
           &nbsp; &nbsp; Envío de configuración WiFi a aulas, carritos y profesores.
         </div>
       </div>
-      <div id="Data" class="card-des" style="display: none">
+      <div id="acciones-id-junta-des" class="card-des" style="display: none">
         <div style="font-size: 13px;" class="card-body">
           &nbsp; &nbsp; Actualización de info de PC concreto con código de la Junta de Andalucía, número de serie del portátil/caja y número escrito sobre la caja.
         </div>
       </div>
-      <div id="Run" class="card-des" style="display: none">
+      <div id="acciones-script-des" class="card-des" style="display: none">
         <div style="font-size: 13px;" >
           &nbsp; &nbsp; Ejecución de código en remoto en aulas, carritos y profesores.
         </div>
