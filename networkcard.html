@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+         <style type="text/css">
+            div { margin: 10px;}
+           </style>
+
+    </head>
+    <body>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Agregar una nueva red</h5>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nombre de red</label>
+                <input type="nombre de red" class="form-control">
+              </div>
+
+              <div class="fw-bold">Tipo de seguridad</div>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Abierta</option>
+                <option value="1">WEP</option>
+                <option value="2">AES WPA2-Personal</option>
+                <option value="3">AES WPA2-Enterprise</option>
+                <option value="4">ERP 802.11x</option>
+              </select>
+
+              <div class="fw-bold">Método EAP</div>
+              <select class="form-select" aria-label="Default select example">
+                <label for="exampleFormControlInput1" class="form-label">Método EAP</label>
+                <option selected>Tarjeta inteligente u otro certificado</option>
+                <option value="1">EAP protegido (PEAP)</option>
+                <option value="2">EAP-SIM</option>
+                <option value="3">EAP-TTLS</option>
+                <option value="4">EAP-AKA</option>
+                <option value="5">EAP-AKA'</option>
+              </select>
+
+              <div class="fw-bold">Método de autenticación</div>
+              <select class="form-select" aria-label="Default select example">
+                <label for="exampleFormControlInput1" class="form-label">Método de autenticación</label>
+                <option selected>Contraseña no cifrada (PAP)</option>
+                <option value="1">Protocolo de autenticación por desafío mutuo (CHAP)</option>
+                <option value="2">Microsoft CHAP (MS-CHAP)</option>
+                <option value="3">Microsoft CHAP Versión 2 (MS-CHAP v2)</option>
+                <option value="4">Tarjeta inteligente u otro certificado</option>
+                <option value="5">Contraseña segura (EAP-MSCHAP v2)</option>
+              </select>
+
+              <div id="buttons">
+              <button type="button" class="btn btn-success">Guardar</button>
+              <button type="button" class="btn btn-success">Cancelar</button>
+
+              </div>
+            
+            </div>
+          </div>
+    </body>
+</html>
