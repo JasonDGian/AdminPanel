@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <style>
+          .active a {
+          color: white !important;
+          }
+          .card-des {
+          border-bottom: rgb(220, 223, 223) 1px solid;
+          } 
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="testjs.js"></script>
+    </head>
+    <body>
+        <header>
+            <!-- Aquí estaría el nombre de la aplicación o un logo, de querer ponerlo. -->
+            <img style="height: 60px; width: 140px;" src="img/icono.png">
+        </header>
+        <main>
+            <!-- Estos son los botones de cada pestaña-->
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button onclick="myFunction('Shutdown'),myFunction('Install')" class="nav-link active" id="nav-1-tab" data-bs-toggle="tab" data-bs-target="#nav-1" type="button" role="tab" aria-controls="nav-1" aria-selected="true" style="color: black;">Shutdown</button>
+                  <button onclick="myFunction('Block'),myFunction('')" class="nav-link" id="nav-2-tab" data-bs-toggle="tab" data-bs-target="#nav-2" type="button" role="tab" aria-controls="nav-2" aria-selected="false" style="color: black;">Block</button>
+                  <button onclick="myFunction('Screenshot'),myFunction('')" class="nav-link" id="nav-3-tab" data-bs-toggle="tab" data-bs-target="#nav-3" type="button" role="tab" aria-controls="nav-3" aria-selected="false" style="color: black;">Screenshot</button>
+                  <button onclick="myFunction('Open'),myFunction('')" class="nav-link" id="nav-4-tab" data-bs-toggle="tab" data-bs-target="#nav-4" type="button" role="tab" aria-controls="nav-4" aria-selected="false" style="color: black;">Open web page</button>
+                  <button onclick="myFunction('Install'),myFunction('')" class="nav-link" id="nav-5-tab" data-bs-toggle="tab" data-bs-target="#nav-5" type="button" role="tab" aria-controls="nav-5" aria-selected="false" style="color: black;">Install</button>
+                  <button onclick="myFunction('Uninstall'),myFunction('')" class="nav-link" id="nav-6-tab" data-bs-toggle="tab" data-bs-target="#nav-6" type="button" role="tab" aria-controls="nav-6" aria-selected="false" style="color: black;">Uninstall</button>
+                  <button onclick="myFunction('WIFI'),myFunction('')" class="nav-link" id="nav-7-tab" data-bs-toggle="tab" data-bs-target="#nav-7" type="button" role="tab" aria-controls="nav-7" aria-selected="false" style="color: black;">WIFI config</button>
+                  <button onclick="myFunction('Data'),myFunction('')" class="nav-link" id="nav-8-tab" data-bs-toggle="tab" data-bs-target="#nav-8" type="button" role="tab" aria-controls="nav-8" aria-selected="false" style="color: black;">Data update</button>
+                  <button onclick="myFunction('Run'),myFunction('')" class="nav-link" id="nav-9-tab" data-bs-toggle="tab" data-bs-target="#nav-9" type="button" role="tab" aria-controls="nav-9" aria-selected="false" style="color: black;">Run code</button>
+                </div>
+              </nav>
+              <div id="Shutdown-des" class="card-des">
+                <div style="font-size: 13px;"class="card-body">
+                  &nbsp; &nbsp; Apagado y reinicio de ordenadores en aulas, carritos y profesores.
+                </div>
+              </div>
+              <div id="Block-des" class="card-des" style="display: none">
+                <div style="font-size: 13px;" class="card-body">
+                  &nbsp; &nbsp; Bloqueo de dispositivos E/S en aulas y carritos.
+                </div>
+              </div>
+              <div id="Screenshot-des" class="card-des" style="display: none">
+                <div style="font-size: 13px;" class="card-body">
+                  &nbsp; &nbsp; Captura de pantallas en aulas y carritos.
+                </div>
+              </div>
+              <div id="Open-des" class="card-des" style="display: none">
+                <div style="font-size: 13px;" class="card-body">
+                  &nbsp; &nbsp; Apertura remota de enlace web a aulas y carritos.
+                </div>
+              </div>
+              <div id="Install-des" class="card-des" style="display: none">
+                <div style="font-size: 13px;" class="card-body">
+                  &nbsp; &nbsp; Instalación remota de aplicaciones en aulas, carritos y profesores.
+                </div>
+              </div>
+              <div id="Uninstall-des" class="card-des" style="display: none">
+                <div style="font-size: 13px;" class="card-body">
+                  &nbsp; &nbsp; Desinstalación remota de aplicaciones en aulas, carritos y profesores.
+                </div>
+              </div>
+              <div id="WIFI-des" class="card-des" style="display: none">
+                <div style="font-size: 13px;" class="card-body">
+                  &nbsp; &nbsp; Envío de configuración WiFi a aulas, carritos y profesores.
+                </div>
+              </div>
+              <div id="Data-des" class="card-des" style="display: none">
+                <div style="font-size: 13px;" class="card-body">
+                  &nbsp; &nbsp; Actualización de info de PC concreto con código de la Junta de Andalucía, número de serie del portátil/caja y número escrito sobre la caja.
+                </div>
+              </div>
+              <div id="Run-des" class="card-des" style="display: none">
+                <div style="font-size: 13px;" >
+                  &nbsp; &nbsp; Ejecución de código en remoto en aulas, carritos y profesores.
+                </div>
+              </div>
+            </div><!-- cierra la seccion de filtro.-->
+              </div>
+                <div class="tab-pane fade" id="nav-1" role="tabpanel" aria-labelledby="nav-1-tab" tabindex="0">1111</div>
+                <div class="tab-pane fade" id="nav-2" role="tabpanel" aria-labelledby="nav-2-tab" tabindex="0">2222</div>
+                <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-3-tab" tabindex="0">3333</div> 
+                <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav-4-tab" tabindex="0">4444</div>
+                <div class="tab-pane fade" id="nav-5" role="tabpanel" aria-labelledby="nav-5-tab" tabindex="0">5555</div>
+                <div class="tab-pane fade" id="nav-6" role="tabpanel" aria-labelledby="nav-6-tab" tabindex="0">6666</div>
+                <div class="tab-pane fade" id="nav-7" role="tabpanel" aria-labelledby="nav-7-tab" tabindex="0">7777</div>
+                <div class="tab-pane fade" id="nav-8" role="tabpanel" aria-labelledby="nav-8-tab" tabindex="0">8888</div>
+                <div class="tab-pane fade" id="nav-9" role="tabpanel" aria-labelledby="nav-9-tab" tabindex="0">9999</div>
+              </div>
+        </main>
+    </body>
+</html>
