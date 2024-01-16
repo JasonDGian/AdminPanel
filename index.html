@@ -8,7 +8,7 @@
         <script src="testjs.js"></script>
     </head>
 
-    <header>
+    <header style="width: 80%; margin-left:11%;">
 
       <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -71,304 +71,438 @@
       </div>
     </header>
     <body>
-        
-        
-
-
         <main>
-          <div class="cajaprueba"></div>
+          <div class="container-fluid">
 
-            <!-- Contenedor de tipo fluido principal -->
-            <div class="container-fluid">
+            <!-- Boton de apertura del panel -->
+            <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <!-- icono flecha boostrap-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                </svg>
+            </button>
 
-                <!-- Boton de apertura del panel -->
-                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                    <!-- icono flecha boostrap-->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                    </svg>
-                </button>
+            <!-- data-bs-scroll TRUE permite deslizar arriba/abajo el contenido de la pagina con el panel abierto-->
+            <!-- data-bs-backdrop FALSE evita el oscurecimiento del contenido del body cuando el panel esta abierto -->
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                
+                <!-- Header del off-canvas-->
+                <div class="offcanvas-header">
 
-                <!-- data-bs-scroll TRUE permite deslizar arriba/abajo el contenido de la pagina con el panel abierto-->
-                <!-- data-bs-backdrop FALSE evita el oscurecimiento del contenido del body cuando el panel esta abierto -->
-                <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <!-- Titulo del panel de administracion.-->
+                    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Admin action panel.</h5>
+                    <!-- Boton con X para cerrar el panel-->
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                </div>
+
+                <!-- Cuerpo principal del modal ofcanvas. Aqui va el contenido.-->
+                <div class="offcanvas-body">
+                  
+                    <!-- Sección de filtro. -->
+                    <div id="filtro">
                     
-                    <!-- Header del canvas-->
-                    <div class="offcanvas-header">
+                        <!-- elemento de accordeon filtro-->
+                        <div class="accordion" id="accordionPanelsStayOpenExample">
 
-                        <!-- Titulo del panel de administracion.-->
-                        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Admin action panel.</h5>
-                        <!-- Boton con X para cerrar el panel-->
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            <div class="accordion-item"> 
 
-                    </div>
+                              <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                  <strong>Device filter options</strong>
+                                </button>
+                              </h2>
 
-                    <!-- Cuerpo principal del modal ofcanvas. Aqui va el contenido.-->
-                    <div class="offcanvas-body">
-                        <!-- Sección de filtro. -->
-                        <div id="filtro">
+                              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                <!-- cuerpo del objeto del acordeon.-->
+                                <div class="accordion-body">
+
+                                    <!-- ejemplo de formulario de opciones de filtrado.-->
+                                    <form action="dirección-del-servicio-en-escucha" method="post" target="_blank" enctype="text/plain">
+
+                                        <!-- Lista opciones principales -->
+                                        <ul> 
+
+                                            <!-- elementos de seleccion de planta -->
+
+                                            <li><b>Classrooms</b></li>
+                                                <ul style="list-style-type: none;">
+                                                    <li>Classroom 0.1&nbsp;<input type="checkbox" id="Classroom0.1" name="Classroom0.1" value="Classroom0.1"></li>
+                                                    <li>Classroom 1.1&nbsp;<input type="checkbox" id="Classroom1.1" name="Classroom1.1" value="Classroom1.1"></li>
+                                                    <li>Classroom 2.1&nbsp;<input type="checkbox" id="Classroom2.1" name="Classroom2.1" value="Classroom2.1"></li>
+                                                </ul>
+                                            </li>
+
+                                            <li><b>Mobile Cart</b></li>
+                                              <ul style="list-style-type: none;">
+                                                  <li>First floor HP&nbsp;<input type="checkbox" id="Classroom0.1" name="Classroom0.1" value="Classroom0.1"></li>
+                                                  <li>First floor Lenovo&nbsp;<input type="checkbox" id="Classroom1.1" name="Classroom1.1" value="Classroom1.1"></li>
+                                                  <li>Second floor HP&nbsp;<input type="checkbox" id="Classroom2.1" name="Classroom2.1" value="Classroom2.1"></li>
+                                              </ul>
+                                            </li>
+
+                                            <li><b>User type</b></li>
+                                                <ul style="list-style-type: none;">
+                                                    <li>Professor&nbsp;<input type="checkbox" id="Professor" name="Professor" value="Professor"></li>
+                                                    <li>Student&nbsp;<input type="checkbox" id="Student" name="Student" value="Student"></li>
+                                                </ul>
+                                            </li>
+                                        </ul> <!-- cierra el cuerpo de lista principal -->
+
+
+                                        <div style="margin-top: 5%;"> <!-- buscador de ordenadores segun numero de serie...-->
+                                          <label for=""><b>Search by id:</b></label>
+                                          <input type="text" style="width:100%; margin-bottom: 10px;">
+                                        </div> <!-- cierre buscador de ordenadores segun numero de serie...-->
+
+
+                                        <input type="submit" value="Apply filter"> <!--boton para aplicar los filtros-->
+
+                                        <input type="reset" value="Clean filter"> <!--boton para limpiar el filtro-->
+                                        
+                                        <!--Estilos para la lista con los checkboxes-->
+
+                                        <style> 
+                                          .multiselect {
+                                              width: 200px;
+                                              position:relative;
+                                          }
+                                       
+                                          .selectBox {
+                                              position: relative;
+                                          }
+                                       
+                                          .selectBox select {
+                                              width: 100%;
+                                          }
+                                       
+                                          .overSelect {
+                                              position: absolute;
+                                              left: 0;
+                                              right: 0;
+                                              top: 0;
+                                              bottom: 0;
+                                          }
+                                       
+                                          #checkboxes {
+                                              display: block;
+                                              border: 1px #dadada solid;
+                                              position:absolute;
+                                              width:100%;
+                                              background-color:white;
+                                              box-sizing: border-box;
+                                              overflow-y:auto;
+                                              max-height:110px;
+                                              z-index: 1;
+                                          }
+                                          #checkboxes.hide {display:none;}
+                                       
+                                          #checkboxes label {
+                                              display: block;
+                                          }
+                                       
+                                          #checkboxes label:hover {
+                                              background-color: #1e90ff;
+                                          }
+                                          </style>
+
+                                          <!--Fin de los estilos para la lista con los checkboxes-->
+
+                                        <div class="multiselect" style="margin-top: 5%;">
+                                          <div class="selectBox" onclick="showCheckboxes()">
+                                              <select>
+                                                  <option>Select Pc</option>
+                                              </select>
+                                              <div class="overSelect"></div>
+                                          </div>
+                                          <div id="checkboxes" class="hide" >
+                                              <label for="c1"><input type="checkbox" id="c1" />&nbsp;Select all</label>
+                                              <label for="c2"><input type="checkbox" id="c2" />&nbsp;Pc 0.5.2</label>
+                                              <label for="c3"><input type="checkbox" id="c3" />&nbsp;Pc 0.5.3</label>
+                                              <label for="c4"><input type="checkbox" id="c4" />&nbsp;Pc 0.5.4</label>
+                                              <label for="c5"><input type="checkbox" id="c5" />&nbsp;Pc 1.2.3</label>
+                                          </div>
+                                      </div>
+                                  </form>
+                                  
+                                  <!--Script para hacer que el select contenga checkboxes-->
+                                  <script> 
+                                  function showCheckboxes() {
+                                      var checkboxes = document.getElementById("checkboxes");
+                                      if(checkboxes.classList.contains("hide")) {
+                                          checkboxes.classList.remove("hide");
+                                      } else {
+                                          checkboxes.classList.add("hide");
+                                      }
+                                  }
+                                  </script>
+
+                                   <!--Fin del script para hacer que el select contenga checkboxes-->
+
+
+                                    </form>
+
+                                </div> <!-- cierra el cuerpo del objeto del acordeon.-->
+                              </div>
+                            </div>
+                            
+                          </div>
+                    
+                    
+                    
+                    </div><!-- cierra la seccion de filtro.-->
+
+                    <!-- seccion de parametros y opciones de accion -->
+                    <div id="acciones" style="background-color: rgb(255, 255, 255); width: 100%;" class="pb-3"> 
                         
-                            <!-- elemento de accordeon filtro-->
-                            <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <!-- parametros accion apagar -->
+                        <div id="acciones-apagar-fil"> 
 
-                                <div class="accordion-item"> 
+                          <h2 class="accordion-header mt-3">
+                              <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                <strong>Shutdown options</strong>
+                              </button>
+                          </h2>
 
-                                  <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                      <strong>Device filter options</strong>
-                                    </button>
-                                  </h2>
 
-                                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                                    <!-- cuerpo del objeto del acordeon.-->
-                                    <div class="accordion-body">
+                          <!-- Botones radio de apagar-bloquear-reiniciar -->
+                          <div class="container pt-2" id="shutdown">  
+                            <center>                              
+                              <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <form>
 
-                                        <!-- ejemplo de formulario de opciones de filtrado.-->
-                                        <form action="dirección-del-servicio-en-escucha" method="post" target="_blank" enctype="text/plain">
+                                  <input type="radio" class="btn-check" name="btnradioapagado" id="log-off-button" autocomplete="off">
+                                  <label class="btn btn-outline-warning" for="log-off-button">Log off</label>
+                                
+                                  <input type="radio" class="btn-check" name="btnradioapagado" id="shut-down-button" autocomplete="off">
+                                  <label class="btn btn-outline-danger" for="shut-down-button">Shut down</label>
+                                
+                                  <input type="radio" class="btn-check" name="btnradioapagado" id="reboot-button" autocomplete="off">
+                                  <label class="btn btn-outline-info" for="reboot-button">Reboot</label>
+                                  <input type="submit" value="Send action" class="mt-2">
 
-                                            <!-- Lista opciones principales -->
-                                            <ul> 
+                                </form>
+                              </div>
+                            </center>
+                          </div>
+                          <!-- Ceirra botones radio de apagar-bloquear-reiniciar -->
+                            
+                        </div>
 
-                                                <!-- elementos de seleccion de planta -->
-                                                <li>
-                                                    <label for="all_floors"><b>Floors&nbsp;(Select all)&nbsp;</b></label><input type="checkbox" id="all_floors" name="all_floors" value="all_floors">
-                                                    <ul style="list-style-type: none;">
-                                                        <!-- elementos de seleccion de planta -->
-                                                        <li><label for="floor1">Floor 1&nbsp;</label><input type="checkbox" id="floor1" name="floor1" value="floor1"></li>
-                                                        <li><label for="floor2">Floor 2&nbsp;</label><input type="checkbox" id="floor2" name="floor2" value="floor2"></li>
-                                                        <li><label for="floor3">Floor 3&nbsp;</label><input type="checkbox" id="floor3" name="floor3" value="floor3"></li>
-                                                        <li><label for="floor4">Floor 4&nbsp;</label><input type="checkbox" id="floor4" name="floor4" value="floor4"></li>
-                                                        <li><label for="floor5">Floor 5&nbsp;</label><input type="checkbox" id="floor5" name="floor5" value="floor5"></li>
-                                                        <li><label for="floor6">Floor 6&nbsp;</label><input type="checkbox" id="floor6" name="floor6" value="floor6"></li>
-                                                    </ul>
-                                                </li>
+                        <!-- parametros accion navegador -->
+                        <div id="acciones-navegador-fil" style="display: none;"> 
 
-                                                <li><b>Classrooms&nbsp;(Select all)&nbsp;</b></label><input type="checkbox" id="all_Classrooms" name="all_Classrooms" value="all_Classrooms"></li>
-                                                    <ul style="list-style-type: none;">
-                                                        <li>Classroom 1&nbsp;<input type="checkbox" id="Classroom1" name="Classroom1" value="Classroom1"></li>
-                                                        <li>Classroom 2&nbsp;<input type="checkbox" id="Classroom1" name="Classroom1" value="Classroom1"></li>
-                                                        <li>Classroom 3&nbsp;<input type="checkbox" id="Classroom1" name="Classroom1" value="Classroom1"></li>
-                                                    </ul>
-                                                </li>
+                            <h2 class="accordion-header mt-3">
+                                <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                  <strong>Remote link browsing</strong>
+                                </button>
+                            </h2>
 
-                                                <li><b>User type&nbsp;(Select all)&nbsp;</b></label><input type="checkbox" id="all_User_Type" name="all_User_Type" value="all_User_Type"></li>
-                                                    <ul style="list-style-type: none;">
-                                                        <li>Professor&nbsp;<input type="checkbox" id="Professor" name="Professor" value="Professor"></li>
-                                                        <li>Student&nbsp;<input type="checkbox" id="Student" name="Student" value="Student"></li>
-                                                        <li>Service & staff&nbsp;<input type="checkbox" id="Service&Staff" name="Service&Staff" value="Service&Staff"></li>
-                                                    </ul>
-                                                </li>
+                            <!-- opciones de enlace remoto.-->
+                            <div class="container pt-3" id="shutdown" >
+                                <form method="post" action=""> 
+                                    <input type="text" style="width:100%; margin-bottom: 10px;">
+                                    <input type="submit" value="Send link">&ensp;<input type="reset" class="mt-2">
+                                </form>
 
-                                                <li><b>Device type&nbsp;(Select all)&nbsp;</b></label><input type="checkbox" id="all_Device_type" name="all_Device_type" value="all_Device_type"></li>
-                                                    <ul style="list-style-type: none;">
-                                                        <li>Computer<input type="checkbox" id="Computer" name="Computer" value="Computer"></li>
-                                                        <li>Laptop&nbsp;<input type="checkbox" id="Laptop" name="Laptop" value="Laptop"></li>
-                                                        <li>WoW / RCC&nbsp;<input type="checkbox" id="Wow/RCC" name="Wow/RCC" value="Wow/RCC"></li>
-                                                    </ul>
-                                                </li>
+                            </div>
+                            <!-- cierre opciones de enlace remoto-->
+                            
+                            
+                        </div>
 
-                                            </ul> <!-- cierra el cuerpo de lista principal -->
+                        <div id="acciones-script-fil" style="display: none;"> <!-- parametros accion orden remota -->
 
-                                            <div> <!-- buscador de ordenadores segun numero de serie...-->
-                                              <form>
-                                              <label for=""><b>Search by id:</b></label>
-                                              <input type="text" style="width:100%; margin-bottom: 10px;">
-                                              </form>
-                                            </div> <!-- cierre buscador de ordenadores segun numero de serie...-->
+                          <h2 class="accordion-header mt-3">
+                              <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                <strong>Remote command</strong>
+                              </button>
+                          </h2>
 
-                                            <input type="submit" value="Apply filter">
-                                        </form>
+                          <div> <!-- opciones de la acción.-->
+                            <form method="post" action="dirección-donde-enviar-los-archivos">
+                            <label for="">Command:</label>
+                            <textarea id="send-command" name="send-command" style="width: 100%; min-height: 100px;"></textarea>
+                            <input type="submit" value="Send command">&ensp;<input type="reset" class="mt-2">
+                            </form>
+                          </div> <!-- cierre opciones accion-->
+
+                        </div>
+
+                        <!-- parametros accion desistalar -->
+                        <div id="acciones-desistalar-fil" style="display: none;"> 
+
+                          <h2 class="accordion-header mt-3">
+                              <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                <strong>Uninstall application</strong> 
+                              </button>
+                          </h2>
+
+                          <div class="pt-2">
+                            <form method="post" action="dirección-donde-enviar-los-archivos">
+                              <input type="text" placeholder="Application name" style="width: 100%;">
+                              <input type="submit" value="Uninstall" class="mt-2">&ensp;<input type="reset" class="mt-2">
+                            </form>
+                          </div>        
+                        </div>
+                        <!-- cierre parametros accion desistalar -->
+
+                        <div id="acciones-instalar-aplicacion-fil" style="display: none;"> <!-- parametros accion nombreaccion -->
+
+                          <h2 class="accordion-header mt-3">
+                              <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                <strong>Install application</strong>
+                              </button>
+                          </h2>
+
+                          <div class="pt-3"> <!-- opciones de la acción.-->
+                            <form method="post" action="donde-enviar-los-archivos" enctype="multipart/form-data">
+                              <input type="file">
+                              <input type="submit" class="mt-2" value="Install">&ensp;<input type="reset" class="mt-2">
+                            </form>
+                          </div> <!-- cierre opciones accion-->
+                          
+                        </div>
+
+                        <div id="acciones-id-junta-fil"style="display: none;"> <!-- parametros accion nombreaccion -->
+
+                          <h2 class="accordion-header mt-3">
+                              <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                <strong>ID Update</strong>
+                              </button>
+                          </h2>
+
+                          <div> <!-- opciones de id junta.-->
+                            <div class="pt-2">
+                              <form method="post" action="dirección-donde-enviar-los-archivos">
+                                <input type="text" placeholder="ID Junta andalucia" style="width: 100%;">
+                                <input type="submit" value="Update ID" class="mt-2">&ensp;<input type="reset" class="mt-2">
+                              </form>
+                            </div>   
+                          </div> <!-- cierre opciones id junta-->
+                          
+                        </div>
+                          
+                           <!-- PANEL MOSTRAR FOTOGRAMA.-->
+                           <div id="acciones-screenshot-fil" style="display: none;"> 
+                            <!-- parametros accion mostrar fotograma -->
+
+                            <h2 class="accordion-header mt-3">
+                                <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                  <strong>Show screenshot</strong>
+                                </button>
+                            </h2>
+
+                            <!-- opciones de mostrar fotograma.-->
+                            <div style="padding-top: 3%;"> 
+                                  <center>                              
+                                  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <form>
+                                      <input type="radio" class="btn-check" name="btnradioblock" id="btnradio-screenshoton" autocomplete="off">
+                                      <label class="btn btn-outline-success" for="btnradio-screenshoton">Turn on</label>
+                                    
+                                      <input type="radio" class="btn-check" name="btnradioblock" id="btnradio-screenshotoff" autocomplete="off">
+                                      <label class="btn btn-outline-danger" for="btnradio-screenshotoff">Turn off</label>
+                                    </form>
+                                  </div>
+                                  </center>
+                                   
+                              </div>
+                            </div> 
+                            <!-- cierre opciones mostrar fotograma-->
+                          <!-- CIERRE PANEL FOTOGRAMA.-->
+
+                          <!-- PANEL BLOQUEAR O DESBLOQUEAR PUERTOS ENTRADA-SALIDA.-->
+                          <div id="acciones-bloqueopuertos-fil" style="display: none;"> 
+                            <!-- parametros accion bloquear o desbloquear puertos entrada-salida -->
+
+                            <h2 class="accordion-header mt-3">
+                                <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                  <strong>Lock Input / Output</strong>
+                                </button>
+                            </h2>
+
+                            <!-- opciones de bloquear o desbloquear puertos entrada-salida.-->
+                            <div style="padding-top: 3%;"> 
+                                  <center>                              
+                                  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <form>
+                                      <input type="radio" class="btn-check" name="btnradioblock" id="btnradio-block" autocomplete="off">
+                                      <label class="btn btn-outline-success" for="btnradio-block">Unlock</label>
+
+                                      <input type="radio" class="btn-check" name="btnradioblock" id="btnradio-unblock" autocomplete="off">
+                                      <label class="btn btn-outline-danger" for="btnradio-unblock">Lock</label>
+                                    
                                       
-                                    </div> <!-- cierra el cuerpo del objeto del acordeon.-->
+                                    </form>
+                                  </div>
+                                  </center> 
+                              </div>
+                            </div> 
+                            <!-- cierre opciones bloquear o desbloquear puertos entrada-salida-->
+                          <!-- CIERRE BLOQUEAR O DESBLOQUEAR PUERTOS ENTRADA-SALIDA.-->
+
+                        <!-- EJEMPLO PANEL OPCIONES.-->
+                        <div id="acciones-networking-fil" style="display: none;"> <!-- parametros accion nombreaccion -->
+
+                          <h2 class="accordion-header mt-3">
+                              <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
+                                <strong>Network Configuration</strong>
+                              </button>
+                          </h2>
+
+                            <!-- Botón que abre el modal de configuración de tarjeta de red -->
+                            <center>
+                            <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Network interface config
+                            </button>
+                            </center>
+
+                            <!-- Modal -->
+                            <!-- data-bs-backdrop="false" añadido para esconder el backdrop oscuro que impide interaccion -->
+                            <div class="modal fade" data-bs-backdrop="false" id="exampleModal" tabindex="-1" aria-labelledby="networkConfigModal" aria-hidden="true">
+                              <div class="modal-dialog">
+
+                                <!-- Contenido del modal -->
+                                <div class="modal-content">
+
+                                  <!-- Cabecero del modal -->
+                                  <!-- utilidad a titulo informativo -->
+                                  <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="networkConfigModal">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+
+                                  <!-- cuerpo del modal -->
+                                  <!-- aqui van los botones de configuración, los valores a configurar en la tarjeta. -->
+                                  <div class="modal-body">
+                                    Aqui introducir los parametros de configuración de la tarjeta.
+                                  </div>
+
+                                  <!-- footer del modal-->
+                                  <!-- aqui introducir botones de aplicar y cerrar-->
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
                                   </div>
                                 </div>
-                                
                               </div>
-                        
-                        
-                        
-                        </div><!-- cierra la seccion de filtro.-->
-
-                        <!-- seccion de parametros y opciones de accion -->
-                        <div id="acciones" style="background-color: rgb(255, 255, 255); width: 100%;" class="pb-3"> 
-                            
-
-                            <div id="acciones-apagar"> <!-- parametros accion apagar -->
-
-                                <h2 class="accordion-header mt-3">
-                                    <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
-                                      <strong>Shutdown options</strong>
-                                    </button>
-                                </h2>
-
-
-                                <div>
-                                    <div class="container pt-3" id="shutdown" >
-                                      <form action="dirección-del-servicio-en-escucha" method="post" target="_blank" enctype="text/plain">
-                                        <button type="button" class="btn btn-warning" id="log-off-button" name="log-off-button" >Log off</button>
-                                        <button type="button" class="btn btn-danger" id="shut-down-button" name="shut-down-button">Shut down</button>
-                                        <button type="button" class="btn btn-info" id="reboot-button" name="reboot-button">Reboot</button>
-                                      </form>
-                                    </div>
-                                </div>
-
                             </div>
 
-                            <div id="acciones-navegador"> <!-- parametros accion navegador -->
+                          <div> <!-- opciones de la acción -->
 
-                                <h2 class="accordion-header mt-3">
-                                    <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
-                                      <strong>Remote link browsing</strong>
-                                    </button>
-                                </h2>
+                          </div> <!-- cierre opciones accion -->
+                          
+                        </div><!-- parametros accion nombreaccion -->
+                        <!-- CIERRE EJEMPLO PANEL OPCIONES -->
 
+                    </div> <!--Cierra la seccion de parametros y opciones de accion -->
 
-                                <div><!-- opciones de la acción.-->
-                                    <div class="container pt-3" id="shutdown" >
-                                        <form method="post" action="C:\Users\Risenstation\Documents\test\test.txt"> 
-                                            <input type="text" style="width:100%; margin-bottom: 10px;">
-                                            <input type="submit" value="Send link">
-                                        </form>
+                </div> <!-- cierra el body del offcanvas -->
 
-                                    </div><!-- cierre opciones accion-->
-                                </div>
-                                
-                            </div>
+            </div> <!-- cierra el elemento principal del panel off-canvas -->
 
-                            <div id="acciones-script"> <!-- parametros accion orden remota -->
-
-                              <h2 class="accordion-header mt-3">
-                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
-                                    <strong>Remote command</strong>
-                                  </button>
-                              </h2>
-
-                              <div> <!-- opciones de la acción.-->
-                                <form method="post" action="dirección-donde-enviar-los-archivos">
-                                <label for="">Command:</label>
-                                <textarea id="send-command" name="send-command" style="width: 100%; min-height: 100px;"></textarea>
-                                <input type="submit" value="Send command">
-                                </form>
-                              </div> <!-- cierre opciones accion-->
-
-                            </div>
-
-                            <div id="acciones-formulario-id"> <!-- parametros accion nombreaccion -->
-
-                              <h2 class="accordion-header mt-3">
-                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
-                                    <strong>Uninstall application</strong>
-                                  </button>
-                              </h2>
-
-                              <div class="pt-2"> <!-- opciones de la acción.-->
-                                <form method="post" action="dirección-donde-enviar-los-archivos">
-
-                                  <select class="mb-2" style="width:100%; height: 35px;">
-                                    <option>Select application</option>
-                                    <!-- ¿De donde salen las opciones de esta lista? ¿Como se generan? ¿Es mejor hacerlo de otra manera? -->
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                    <option>Option 4</option>
-                                    <option>Option 5</option>
-                                    <option>Option 6</option>
-                                  </select>
-
-                                  <input type="submit" value="Uninstall">
-                                </form>
-                                
-
-                              </div> <!-- cierre opciones accion-->
-                              
-                            </div>
-
-                            <div id="acciones-instalar-aplicacion"> <!-- parametros accion nombreaccion -->
-
-                              <h2 class="accordion-header mt-3">
-                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
-                                    <strong>Install application</strong>
-                                  </button>
-                              </h2>
-
-                              <div class="pt-3"> <!-- opciones de la acción.-->
-                                <form method="post" action="donde-enviar-los-archivos" enctype="multipart/form-data">
-                                  <input type="file">
-                                </form>
-                              </div> <!-- cierre opciones accion-->
-                              
-                            </div>
-
-                            <div id="acciones-nombreaccion"> <!-- parametros accion nombreaccion -->
-
-                              <h2 class="accordion-header mt-3">
-                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
-                                    <strong>Nombre panel</strong>
-                                  </button>
-                              </h2>
-
-                              <div> <!-- opciones de la acción.-->
-
-                              </div> <!-- cierre opciones accion-->
-                              
-                            </div>
-
-                            <div id="acciones-nombreaccion"> <!-- parametros accion nombreaccion -->
-
-                              <h2 class="accordion-header mt-3">
-                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
-                                    <strong>Nombre panel</strong>
-                                  </button>
-                              </h2>
-
-                              <div> <!-- opciones de la acción.-->
-
-                              </div> <!-- cierre opciones accion-->
-                              
-                            </div>
-
-                            <div id="acciones-nombreaccion"> <!-- parametros accion nombreaccion -->
-
-                              <h2 class="accordion-header mt-3">
-                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
-                                    <strong>Nombre panel</strong>
-                                  </button>
-                              </h2>
-
-                              <div> <!-- opciones de la acción.-->
-
-                              </div> <!-- cierre opciones accion-->
-                              
-                            </div>
-
-                            <div id="acciones-nombreaccion"> <!-- parametros accion nombreaccion -->
-
-                              <h2 class="accordion-header mt-3">
-                                  <button id="Actions" style="height: 40px; background-color: rgb(193, 212, 240); border-radius: 5px; padding-left: 22px;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-controls="panelsStayOpen-collapseOne">
-                                    <strong>Nombre panel</strong>
-                                  </button>
-                              </h2>
-
-                              <div> <!-- opciones de la acción.-->
-
-                              </div> <!-- cierre opciones accion-->
-                              
-                            </div>
-                              
-
-
-
-
-                            
-                            
-                        
-                        </div> <!--Cierra la seccion de parametros y opciones de accion -->
-
-                    </div> <!-- cierra el body del offcanvas-->
-
-                </div> <!-- cierra el elemento principal del panel off-canvas -->
-
-            </div> <!-- closes main fluid container.-->
+        </div> <!-- closes main fluid container -->
 
 
         </main>
