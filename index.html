@@ -204,6 +204,7 @@
                                           </div>
                                       </form>
                                       
+
                                       <!--Script para hacer que el select contenga checkboxes-->
                                       <script> 
                                       function showCheckboxes() {
@@ -448,14 +449,52 @@
                                       <!-- Cabecero del modal -->
                                       <!-- utilidad a titulo informativo -->
                                       <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="networkConfigModal">Modal title</h1>
+                                        <h1 class="modal-title fs-5" id="networkConfigModal">Network configuration</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                       </div>
 
-                                      <!-- cuerpo del modal -->
+                                      <!-- cuerpo del modal ( Rellenar con trabajo de NERE )-->
                                       <!-- aqui van los botones de configuración, los valores a configurar en la tarjeta. -->
                                       <div class="modal-body">
-                                        Aqui introducir los parametros de configuración de la tarjeta.
+                                            <div class="mb-3">
+                                              <label for="exampleFormControlInput1" class="form-label">Nombre de red</label>
+                                              <input type="nombre de red" class="form-control">
+                                            </div>
+
+                                            <!-- cuerpo de tarjeta de configuracion - Trabajo de NERE. -->
+
+                                            <div class="fw-bold">Tipo de seguridad</div>
+                                            <select class="form-select" aria-label="Default select example">
+                                              <option selected>Abierta</option>
+                                              <option value="1">WEP</option>
+                                              <option value="2">AES WPA2-Personal</option>
+                                              <option value="3">AES WPA2-Enterprise</option>
+                                              <option value="4">ERP 802.11x</option>
+                                            </select>
+
+                                            <div class="fw-bold">Método EAP</div>
+                                            <select class="form-select" aria-label="Default select example">
+                                              <label for="exampleFormControlInput1" class="form-label">Método EAP</label>
+                                              <option selected>Tarjeta inteligente u otro certificado</option>
+                                              <option value="1">EAP protegido (PEAP)</option>
+                                              <option value="2">EAP-SIM</option>
+                                              <option value="3">EAP-TTLS</option>
+                                              <option value="4">EAP-AKA</option>
+                                              <option value="5">EAP-AKA'</option>
+                                            </select>
+
+                                            <div class="fw-bold">Método de autenticación</div>
+                                            <select class="form-select" aria-label="Default select example">
+                                              <label for="exampleFormControlInput1" class="form-label">Método de autenticación</label>
+                                              <option selected>Contraseña no cifrada (PAP)</option>
+                                              <option value="1">Protocolo de autenticación por desafío mutuo (CHAP)</option>
+                                              <option value="2">Microsoft CHAP (MS-CHAP)</option>
+                                              <option value="3">Microsoft CHAP Versión 2 (MS-CHAP v2)</option>
+                                              <option value="4">Tarjeta inteligente u otro certificado</option>
+                                              <option value="5">Contraseña segura (EAP-MSCHAP v2)</option>
+                                            </select>
+
+                                             <!-- fin cuerpo de tarjeta de configuracion-->
                                       </div>
 
                                       <!-- footer del modal-->
