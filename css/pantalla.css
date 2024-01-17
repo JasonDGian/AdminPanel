@@ -20,7 +20,7 @@
     margin-left: 50px;
     margin-bottom: 50px;
     width: 250px;
-    height: 307px;
+    height: auto;
 }
 
 #pc-arriba{
@@ -64,8 +64,8 @@
 #pc-medio{
     width: 100%;
     height: 210px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 3px;
+    margin-bottom: 2px;
     text-align: center;
 }
 
